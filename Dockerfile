@@ -6,7 +6,7 @@ RUN apt-get install -y git
 RUN apt-get install -y make
 RUN apt-get install -y python
 
-WORKDIR /workspace/Slides-Topicos
-ADD package.json /workspace/Slides-Topicos
+WORKDIR /workspace/Slides-DAW
+ADD package.json /workspace/Slides-DAW
 # ADD package-lock.json /workspace
 RUN npm install
