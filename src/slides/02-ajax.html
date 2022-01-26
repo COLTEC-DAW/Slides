@@ -1,7 +1,205 @@
 <section class="title" data-background="img/coltec.png">
     <h3>COLTEC/UFMG</h3>
-    <h1>AJAX &amp; JSON</h1>
+    <h1>AJAX &amp; jQuery</h1>
     <address class="author">
         João Eduardo Montandon
     </address>
+</section>
+
+<section>
+    <h2>O que é AJAX?</h2>
+    <iframe width="720" height="432" src="https://www.youtube.com/embed/aGX6fI3cYlw" title="Ajax vs Non-Ajax"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</section>
+
+<section>
+    <h2>O que é AJAX?</h2>
+    <p>
+        AJAX é uma técnica utilizada para carregar dados em partes de uma página web sem a necessidade de carregar toda a página.
+    </p>
+</section>
+
+<section>
+    <h2>Por quê utilizar AJAX?</h2>
+    <img data-src="img/02-ajax/dont-make-me-think.png" alt="">
+</section>
+
+<section>
+    <h2>Por quê utilizar AJAX?</h2>
+    <ol>
+        <li><b>Manutenção do fluxo de interação</b></li>
+        <li><b>Menor consumo de dados</b></li>
+        <li>Trabalha de forma assíncrona</li>
+        <li>Permite validações junto ao servidor</li>
+        <li>...</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Como funciona?</h2>
+    <img data-src="img/02-ajax/ajax-pipeline.png" alt="">
+</section>
+
+<section>
+    <h2>AJAX: Exemplo</h2>
+    <pre><code data-noescape data-trim class="javascript" style="max-height: 100%">
+
+        // Cria objeto que irá fazer a requisição
+        let xhr = new XMLHttpRequest();
+
+        // Configura a função a ser chamada quando houver resposta
+        xhr.onload = function () {
+            if (this.status === 200) { // 200 -> status OK
+                // recupera o dado recebido
+                let user = JSON.parse(this.responseText);
+
+                // atualiza interface com nova informação
+                document.getElementById('name').innerHTML = user.name;
+            }
+        }
+
+        // Configura os parâmetros da requisição & envia a requisição
+        xhr.open('GET', 'https://api.github.com/users/jemaf', true);
+        xhr.send();
+    </code></pre>
+</section>
+
+<section>
+    <h2>AJAX &amp; jQuery</h2>
+    <p>
+        A biblioteca jQuery disponibiliza uma série de métodos para manipular requisições AJAX mais facilmente.
+    </p>
+    <table>
+        <tr>
+            <th><b>Método</b></th>
+            <th><b>Descrição</b></th>
+        </tr>
+        <tr>
+            <td><code>$.get(url[, data][, callback][, type])</code></td>
+            <td>
+                Realiza uma requisição AJAX do tipo GET. 
+                <!-- Utilizado quando se deseja buscar dado do servidor. -->
+            </td>
+        </tr>
+        <tr>
+            <td><code>$.post(url[, data][, callback][, type])</code></td>
+            <td>
+                Realiza uma requisição AJAX do tipo POST.
+                <!-- Utilizado quando se deseja enviar dados ao servidor. -->
+            </td>
+        </tr>
+        <tr>
+            <td><code>$.getJSON(url[, data][, callback])</code></td>
+            <td>
+                Recupera dados em JSON através de um GET.
+                <!-- Utilizado para recuperar dados de APIs JSON. -->
+            </td>
+        </tr>
+        <tr>
+            <td><code>$.ajax(url[, callback])</code></td>
+            <td>
+                Método geral para requisição AJAX.
+                <!-- As demais funções são construídas a partir desta função. -->
+            </td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2><code>$.get()</code></h2>
+    <pre><code data-trim class="html">
+        ...
+        <script>
+            // O parâmetro data presente no callback contém
+            // o conteúdo da resposta da requisição realizada
+            $.get('https://api.github.com/users/jemaf', function (data) {
+                $('#name').html(data.name);
+            });
+        </script>
+        ...
+    </code></pre>
+</section>
+
+<section>
+    <h2><code>$.post()</code></h2>
+    <pre><code data-trim class="html">
+        ...
+        <script>
+            let userData = $('#signup-form').serialize();
+
+            $.post('signup.php', userData, function (data) {
+                $('#register').html(data);
+            });
+        </script>
+        ...
+    </code></pre>
+    <div class="card" style="width: 230px; position: absolute; right: 10%; top: 20%; transform: rotate(23deg);">
+        O que <code>serialize()</code> faz?
+    </div>
+</section>
+
+<section>
+    <h2>Tratamento de Erro</h2>
+    <p>
+        jQuery fornece métodos que, ao serem encadeados, auxiliam no tratamento de erros provenientes de requisições realizadas.
+    </p>
+    <ol>
+        <li><code>.done()</code> é disparado quando a requisição foi realizada com sucesso</li>
+        <li><code>.fail()</code> é disparado quando a requisição retornou algum tipo de erro</li>
+        <li><code>.always()</code> é disparado em ambas as situações</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Tratamento de Erro</h2>
+    <pre><code data-trim class="html">
+        <script>
+            $.get('https://api.github.com/users/jemaf')
+                .done(function (data) { 
+                    $('#name').html(data.name);
+                })
+                .fail(function () {
+                    $('#error').show();
+                    $('#user').hide();
+                })
+                .always(function () {
+                    console.log("request completed");
+                });
+        </script>
+    </code></pre>
+</section>
+
+<section>
+    <h2>Sidebar: CORS</h2>
+    <p>Por meio de código JavaScript, nós fizemos requisições na máquina do usuário para outro sistema, fora do servidor original...</p>
+</section>
+
+<section>
+    <h1 class="shout">Isso é perigoso!!!</h1>
+</section>
+
+<section>
+    <h2>Sidebar: CORS</h2>
+    <ul>
+        <li>Por motivos de segurança, os navegadores <b>bloqueiam</b> requisições feitas para outros domínios</li>
+        <li>Esse tipo de requisição é conhecido como <b>cross-origin requests (CORS)</b></li>
+    </ul>
+    <img data-src="img/02-ajax/cors-principle.png" alt="">
+</section>
+
+<section>
+    <h2>Como tratar CORS?</h2>
+    <ul>
+        <li>Modificar cabeçalho <code>Access-Control-Allow-Origin</code></li>
+        <li>utilizar pre-flight requests</li>
+    </ul>
+</section>
+
+<section class="reference">
+    <h2>Referências</h2>
+    <ul>
+        <li>JavaScript &amp; jQuery: Interactive front-end web development, Jon Duckett, Cap. 8: Ajax &amp; JSON</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a>, Mozilla Developer Network</li>
+    </ul>
 </section>
