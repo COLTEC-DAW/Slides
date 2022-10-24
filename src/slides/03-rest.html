@@ -1,0 +1,325 @@
+<section class="title" data-background="img/coltec.png" data-state="blur">
+    <h3>COLTEC/UFMG</h3>
+    <h1>Serviços REST</h1>
+    <address class="author">
+        João Eduardo Montandon
+    </address>
+</section>
+<section data-background="img/03-rest/mobile_phone.jpg" data-state="dark">
+    <blockquote style="border-left: 25px solid rgba(255, 255, 255, 0.6); color: white;">
+        In today's modern world, people are either asleep or connected.
+        <footer style="color: white;">Janice H. Reinold, Rosetta Marketing</footer>
+    </blockquote>
+</section>
+<section>
+    <h2>O Mundo Conectado</h2>
+    <p>
+        Cada vez mais pessoas trafegam mais dados pela rede:
+    </p>
+    <ul>
+        <li>95% dos usuários do <b>Facebook</b> acessam a plataforma por smartphones<small><a
+                    href="https://www.statista.com/statistics/377808/distribution-of-facebook-users-by-device/">(link)</a></small>
+        </li>
+        <li>Em 2017, os smartphones foram responsáveis por 50,3% do tráfico web<small><a
+                    href="https://www.statista.com/statistics/241462/global-mobile-phone-website-traffic-share/">(link)</a></small>
+        </li>
+        <li>em 2016, 1,7 GB de dados foram utilizados por mês, por usuário. <br />
+            Esse número deverá crescer mais de 5x até 2021<small><a
+                    href="https://www.statista.com/statistics/752731/worldwide-average-monthly-smartphone-cellular-data-usage/">(link)</a></small>
+        </li>
+        <li>1,1 trilhões de fotos foram tiradas por smartphones em 2016<small><a
+                    href="http://www.businessinsider.com/12-trillion-photos-to-be-taken-in-2017-thanks-to-smartphones-chart-2017-8">(link)</a></small>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Como construir um sistema no mundo de hoje?</h1>
+</section>
+<section>
+    <h1 class="stamp">
+        Um pouco de história...
+    </h1>
+    <img data-src="img/03-rest/history.webp" alt="">
+</section>
+<section>
+    <h2>Sistemas Monolíticos</h2>
+    <ul>
+        <li>Anos 50/60</li>
+        <li>Computação científica &amp; propósito específico</li>
+        <li>Sem necessidade de arquitetura elaborada</li>
+        <li>Sistemas de baixa complexidade</li>
+        <li>Linguagens de programação não estruturadas</li>
+    </ul>
+</section>
+<section>
+    <h2>Padrão MVC</h2>
+    <ul>
+        <li>Idealizado em meados dos anos 70</li>
+        <li>Início da "computação comercial"</li>
+        <li>Sistemas deveriam atender a requisitos complexos</li>
+        <li>Sistemas voltados para público geral</li>
+        <li>Divisão sistema em módulos que representam suas principais tarefas</li>
+        <li>Organização a nível lógico, i.e., sistema se localiza em uma única máquina!</li>
+    </ul>
+</section>
+<section>
+    <h2>Arquitetura em Camadas</h2>
+    <ul>
+        <li>Anos 80/90</li>
+        <li>Resultado da consolidação da estrutura em rede e advento da web</li>
+        <li>Módulos do sistema ficam fisicamente separados uns dos outros, porém logicamente interligados</li>
+    </ul>
+</section>
+<section>
+    <h2>Sistemas Distribuídos</h2>
+    <ul>
+        <li>Anos 2000</li>
+        <li><b>Software como Serviço</b></li>
+        <li>Sua complexidade torna inviável mantê-lo sob domínio de um único "dono"</li>
+        <ul>
+            <li>Solução: Dividir para conquistar!</li>
+        </ul>
+    </ul>
+</section>
+<section>
+    <h2>Saas: Software as a Service</h2>
+    <p>
+        <a href="https://www.statista.com/statistics/277483/market-value-of-the-largest-internet-companies-worldwide/">Market capitalization of the largest internet companies worldwide as of June 2022</a>
+    </p>
+    <p>
+        <a href="https://www.startuptalky.com/spotify_success_story/">Spotify Success Story: How it Brings Music for Everyone?</a>
+    </p>
+    <p>
+        <a href="https://www.visualcapitalist.com/aws-powering-the-internet-and-amazons-profits/">AWS: Powering the Internet and Amazon’s Profits</a>
+    </p>
+    <p>
+        <a href="https://learn.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2025">Microsoft: Products Ending Support in 2025</a>
+    </p>
+</section>
+<section>
+    <h2>Arquitetura de Serviços</h2>
+    <p>
+        Solução proposta em 2000 para integrar diferentes sistemas
+    </p>
+    <img src="img/03-rest/rest.png">
+</section>
+<section>
+    <h2>Arquitetura de Serviços</h2>
+    <p>
+        A Arquitetura de Serviços apresenta várias vantagens:
+    </p>
+    <ul class="check">
+        <li>Interoperabilidade</li>
+        <li>Centralização dos dados</li>
+        <li>Baixo custo</li>
+        <li>Escalável</li>
+        <li>Alta disponibilidade</li>
+    </ul>
+</section>
+<section>
+    <h2>Arquitetura de Serviços</h2>
+    <table>
+        <thead>
+            <tr>
+                <td><b>Protocolo</b></td>
+                <td><b>Descrição</b></td>
+            </tr>
+        </thead>
+        <tr>
+            <td><b>SOAP</b></td>
+            <td><b>S</b>imple <b>O</b>bject <b>A</b>ccess <b>P</b>rotocol é um protocolo que define a comunicação via
+                web services por meio de especificações XML. Sua estrutura permite flexibilizar o meio de comunicação
+                com o web service, porém requer maior trabalho para configuração.</td>
+        </tr>
+        <tr>
+            <td><b>REST</b></td>
+            <td><b>RE</b>presentational <b>S</b>tate <b>T</b>ransfer é um padrão arquitetural de provimento de serviços
+                que se utiliza das funções existentes no protocolo HTTP para disponibilizar seus dados. Por derivar do
+                HTTP, o padrão é extremamente simples de ser aplicado.</td>
+        </tr>
+    </table>
+</section>
+<section>
+    <h2>REST VS SOAP</h2>
+    <p>Mensagem em SOAP</p>
+    <pre><code class="xml" data-noescape data-trim style="padding: 1%">
+        &lt;?xml version="1.0"?&gt;
+        &lt;soap:Envelope xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+            soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding"&gt; 
+            &lt;soap:body pb="http://www.coltec.ufmg.br/notas"&gt;
+                &lt;pb:GetNotasAluno&gt; 
+                    &lt;pb:idAluno&gt;12345&lt;/pb:idAluno&gt;
+                &lt;/pb:GetNotasAluno&gt; 
+            &lt;/soap:Body&gt;
+        &lt;/soap:Envelope&gt;
+    </code></pre>
+
+    <p>Mensagem em REST</p>
+    <pre><code data-noescape data-trim style="padding: 1%">
+        http://www.coltec.ufmg.br/notas/NotasAluno/12345
+    </code></pre>
+</section>
+<section>
+    <h1>Padrão REST</h1>
+</section>
+<section>
+    <h3>
+        Por que não utilizar a própria Web para fazer a comunicação entre os sistemas?
+    </h3>
+</section>
+<section>
+    <h2>Padrão REST</h2>
+    <ul>
+        <li><b>RE</b>presentational <b>S</b>tate <b>T</b>ransfer</li>
+        <li>Modelo arquitetural voltado para sistemas distribuídos</li>
+        <li>Resultado de uma <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">tese de doutorado</a>, escrita por Roy Fielding.</li>
+    </ul>
+    <p style="margin-top: 4%;">
+        <b>Utiliza o protocolo HTTP como base de seu funcionamento</b>
+    </p>
+</section>
+<section>
+    <h2>REST &mdash; Princípios</h2>
+    <ol>
+        <li>Addressability</li>
+        <li>Uniform/Constrained Resources</li>
+        <li>Stateless</li>
+        <li>Representation-Oriented</li>
+        <li>Hypermedia As The Engine Of Application State</li>
+    </ol>
+</section>
+<section>
+    <h2>Addressability</h2>
+    <p>Todo recurso disponibilizado pelo serviço é mapeado unicamente por meio de uma URI.</p>
+    <pre><code data-noescape data-trim style="padding:1%">
+        https://api.github.com/users/torvalds
+    </code></pre>
+    <div class="card" style="position:fixed; top: 65%; left: 65%; width: 8em;">
+        Qual usuário é retornado por essa URI?
+    </div>
+</section>
+<section>
+    <h2>Uniform/Constrained Resouces</h2>
+    <p>Possui um conjunto pré-definido de ações para manipular os recursos do serviço (CRUD).</p>
+    <table style="max-width: 80%;">
+        <thead>
+            <td><b>Ação</b></td>
+            <td><b>Descrição</b></td>
+        </thead>
+        <tr>
+            <td><b>GET</b></td>
+            <td>Operação somente leitura. Utilizada para fazer requisições de leitura de dados do serviço. Deve ser
+                idempotente de segura.</td>
+        </tr>
+        <tr>
+            <td><b>POST</b></td>
+            <td>Operação de escrita. Geralmente utilizada para adicionar novos recursos no serviço. Não é idempotente
+                nem segura.</td>
+        </tr>
+        <tr>
+            <td><b>PUT</b></td>
+            <td>Operação de escrita, utilizada para fazer atualização de recursos já existentes. Deve ser idempotente.
+            </td>
+        </tr>
+        <tr>
+            <td><b>DELETE</b></td>
+            <td>Utilizada para remover um recurso existente. Também deve ser idempotente.</td>
+        </tr>
+    </table>
+</section>
+<section>
+    <h2>Stateless</h2>
+    <p>O serviço deve manter apenas as informações dos dados que ele expõe.</p>
+    <p><b>Objetivo:</b> Escalabilidade</p>
+    <p>Não significa que a aplicação não pode manter estado.</p>
+    <ul>
+        <li>Dados de sessão são enviados em cada requisição.</li>
+    </ul>
+</section>
+<section>
+    <h2>Representation-Oriented</h2>
+    <p>As informações expostas pelos seriços são estruturadas, e
+        para representá-los é necessário utilizar uma linguagem que suporte essa estruturação <small>(<a
+                href="https://pt.wikipedia.org/wiki/XML">XML</a>, <a href="https://www.json.org/json-pt.html">JSON</a>,
+            <a href="http://yaml.org/">YAML</a>)</small>.</p>
+    <p>Os dados são enviados no <em>response</em> da requisição:</p>
+    <ul>
+        <li>Propriedade dos dados são enviados no cabeçalho.</li>
+        <li>Os dados são enviados no corpo.</li>
+    </ul>
+</section>
+<section>
+    <h2>Representation-Oriented</h2>
+    <pre><code data-trim data-noescape>
+        $ curl -v https://api.github.com/users/coltec-mg
+    </code></pre>
+    <pre><code data-trim data-noescape style="max-height: 100%">
+        HTTP/1.1 200 OK
+        Server: GitHub.com
+        Date: Wed, 20 Jun 2018 17:49:44 GMT
+        <mark>Content-Type: application/json; charset=utf-8</mark>
+        Content-Length: 1333
+        <mark>X-RateLimit-Limit: 60</mark>
+        <mark>X-RateLimit-Remaining: 57</mark>
+        X-RateLimit-Reset: 1529520555
+        <mark>X-GitHub-Media-Type: github.v3; format=json</mark>
+        ...
+
+        {
+            "login": "COLTEC-MG",
+            "id": 9219735,
+            "url": "https://api.github.com/users/COLTEC-MG",
+            "html_url": "https://github.com/COLTEC-MG",
+            ...
+        }
+    </code></pre>
+</section>
+<section>
+    <h2>HATEOAS</h2>
+    <p><b>H</b>ypermedia <b>A</b>s <b>T</b>he <b>E</b>ngine <b>O</b>f <b>A</b>pplication <b>S</b>tate.</p>
+    <p>O volume de dados a ser disponibilizado por um serviço pode ser enorme. Os serviços REST se utilizam do mecanismo
+        de <b>hiperlinks</b> para dividir o pedido em partes, e fornecê-las através de novas requisições.</p>
+    <p></p>
+    <p>Dessa forma, clientes e serviços não são sobrecarregados.</p>
+</section>
+<section>
+    <h2>HATEOAS</h2>
+    <pre><code data-noescape data-trim>
+        $ curl -v https://api.github.com/repos/facebook/react/contributors?<mark>page=1</mark>
+    </code></pre>
+    <pre><code data-noescape data-trim>
+        [
+            {
+              "login": "zpao",
+              "id": 8445,
+              ...
+            },
+            {
+              "login": "sophiebits",
+              "id": 6820,
+             ...
+            },
+            ...
+        ]
+    </code></pre>
+    <div class="card" style="position: fixed; right: 10%; top: 25%; width: 10em;">
+        <b>Faça um teste:</b> refaça a consulta informando outro valor para <code>page</code> e veja o que acontece.
+    </div>
+</section>
+<section>
+    <h2>Vantagens</h2>
+    <ol>
+        <li>Sem necessidade de aprender novas tecnologias</li>
+        <li>Suporte nativo a qualquer dispositivo com acesso a web</li>
+        <li>Facilidade de mudanças/adaptações (hot deploy)</li>
+    </ol>
+</section>
+<section class="reference">
+    <h2>Referência Complementar</h2>
+    <ul>
+        <li><a href="https://www.g2.com/articles/history-of-computers#computers-from-2000-2010">A Complete History of Computers: From the 1800s to Now</a></li>
+        <li><a href="https://www.amazon.com.br/Desenvolvimento-API-REST-S%C3%A9rie-Universit%C3%A1ria-ebook/dp/B09LRDNSLV/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=VEEULHYPV2RH&keywords=rest+apis+universitaria&qid=1652986240&s=books&sprefix=rest+apis+universitari%2Cstripbooks%2C205&sr=1-1">TORRES, F. E. Desenvolvimento de API REST. 1ª edição ed. Editora Senac São Paulo, 2021.
+        </a></li>
+        <li><a href="https://engsoftmoderna.info/artigos/micro-saas.html">Microempresas de Software como Serviço</a></li>
+    </ul>
+</section>
