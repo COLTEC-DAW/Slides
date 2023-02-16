@@ -102,7 +102,7 @@
 <section>
     <p>
         <code data-noescape data-trim class="html">
-            <mark class="green">&lt;img</mark> <mark class="blue">src="images/coltec-ufmg.png"</mark> alt="Logo COLTEC" <mark class="green">/&gt</mark>
+            <mark class="green">&lt;img</mark> <mark class="blue">src="images/coltec-ufmg.png"</mark> alt="Logo COLTEC" <mark class="green">/&gt;</mark>
         </code>
     </p>
 </section>
@@ -145,4 +145,171 @@
             Untitled</a> by João Eduardo Montandon (<a href="https://codepen.io/jemaf">@jemaf</a>)
         on <a href="https://codepen.io">CodePen</a>.
     </iframe>
+</section>
+
+<section class="reference">
+    <h2>Referências</h2>
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Mozilla Developer Network: Getting started with HTML</a>
+        </li>
+        <li>
+            <a href="https://marksheet.io/html-basics.html">MarkSheet: HTML Basics</a>
+        </li>
+        <li>
+            <a href="https://htmlreference.io/">htmlreference.io</a>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1>Elementos Textuais</h1>
+</section>
+
+<section>
+    <blockquote>
+        Content is king.
+        <footer><a href="https://medium.com/@HeathEvans/content-is-king-essay-by-bill-gates-1996-df74552f80d9">Bill Gates, 1996</a></footer>
+    </blockquote>
+</section>
+
+<section>
+    <h2>Elementos Textuais</h2>
+    <ul>
+        <li>Grande parte do conteúdo das páginas web é composto por texto.</li>
+        <li><b>As páginas web foram concebidas para serem lidas!</b></li>
+        <li>Objetivo: Exibem e organizam o texto da página.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Principais Elementos</h2>
+    <ol>
+        <li>Parágrafos</li>
+        <li>Headings</li>
+        <li>Listas</li>
+        <li>Citações</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Parágrafos</h2>
+    <ul>
+        <li>Elemento-base de exibição de texto.</li>
+        <li>Exibe o texto no formato de um parágrafo.</li>
+        <li>Representado pelo elemento <code>&lt;p&gt;</code>.</li>
+    </ul>
+</section>
+
+<section>
+    <p style="font-size: 1.5em;">
+        <code data-noescape data-trim class="html">
+                &lt;p&gt;Olá! Eu sou um parágrafo.&lt;/p&gt;
+        </code>
+    </p>
+</section>
+
+<section>
+    <h2>Headings</h2>
+    <ul>
+        <li>Fornecem os títulos da página.</li>
+        <li>Disponibilizados em seis níveis: <code>&lt;h1&gt;</code> (mais importante) a <code>&lt;h6&gt;</code> (menos importante).</li>
+    </ul>
+</section>
+
+<section>
+    <p style="font-size: 1.5em;">
+        <code data-noescape data-trim class="html">
+                    &lt;h2&gt;Subtítulo da página&lt;/h2&gt;
+        </code>
+    </p>    
+</section>
+
+<section>
+    <h2>Listas</h2>
+    <p>Podem ser definidas três tipos de listagem</p>
+    <ul>
+        <li><code>&lt;ul&gt;</code> lista elementos não-ordenados</li>
+        <li><code>&lt;ol&gt;</code> lista elementos ordenados</li>
+        <li><code>&lt;dl&gt;</code> representam listas de definição</li>
+    </ul>
+</section>
+
+<section>
+    <div style="float: left; width: 33%;">
+        <pre style="box-shadow: none; font-size: 2.5rem;">
+            <code data-noescape data-trim class="html">
+                &lt;ul&gt;
+                    &lt;li&gt;item 1&lt;/li&gt;
+                    &lt;li&gt;item 2&lt;/li&gt;
+                    &lt;li&gt;item 3&lt;/li&gt;
+                &lt;/ul&gt;
+            </code>
+        </pre>
+    </div>
+    <div style="float: left; width: 33%;">
+        <pre style="box-shadow: none; font-size: 2.5rem;">
+            <code data-noescape data-trim class="html">
+                &lt;ol&gt;
+                    &lt;li&gt;1o item&lt;/li&gt;
+                    &lt;li&gt;2o item&lt;/li&gt;
+                    &lt;li&gt;3o item&lt;/li&gt;
+                &lt;/ol&gt;
+            </code>
+        </pre>
+    </div>
+    <div style="float: left; width: 33%;">
+        <pre style="box-shadow: none; font-size: 2.5rem;">
+            <code data-noescape data-trim class="html">
+                &lt;dl&gt;
+                    &lt;dd&gt;definição 1&lt;/dd&gt;
+                    &lt;dd&gt;definição 2&lt;/dd&gt;
+                    &lt;dd&gt;definição 3&lt;/dd&gt;
+                &lt;/dl&gt;
+            </code>
+        </pre>
+    </div>
+</section>
+
+<section>
+    <h2>Formatação de Texto</h2>
+    <ul>
+        <li>Elementos que modificam a exibição de trechos de texto.</li>
+        <li>Ajudam a definir o significado (semântica) de determinadas palavras na página.</li>
+        <ol>
+            <li><code>&lt;a&gt;</code> para definir links.</li>
+            <li><code>&lt;strong&gt;</code> ou <code>&lt;b&gt;</code> para destaque em negrito.</li>
+            <li><code>&lt;i&gt;</code> ou <code>&lt;em&gt;</code> para destaque em itálico.</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#inline_text_semantics">Muitos outros...</a></li>
+        </ol>
+    </ul>
+</section>
+
+<section>
+    <pre style="box-shadow: none; font-size: 2.5rem; text-align: center;">
+        <code data-noescape data-trim class="html">
+            &lt;p&gt;Os elementos textuais são &lt;strong&gt;muito&lt;/strong&gt; importantes.&lt;/p&gt;
+        </code>
+    </pre>
+</section>
+
+<section>
+    <h2>Exemplo</h2>
+
+</section>
+
+<section class="reference">
+    <h2>Referências</h2>
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">Mozilla
+                Developer Network: Structuring the web with HTML</a>
+        </li>
+        <li>
+            <a href="https://marksheet.io/html-basics.html">MarkSheet: HTML</a>
+        </li>
+        <li>
+            <a href="https://htmlreference.io/">htmlreference.io</a>
+        </li>
+    </ul>
 </section>
