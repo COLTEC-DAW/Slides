@@ -1,0 +1,148 @@
+<section id="ajax" class="title" data-background="img/coltec.png" data-state="blur">
+    <h3>COLTEC/UFMG</h3>
+    <h1>HTML</h1>
+    <address class="author">
+        João Eduardo Montandon
+    </address>
+</section>
+
+<section>
+    <h2>HTML</h2>
+    <ul>
+        <li><em><b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage</em></li>
+        <li>Linguagem de <b>marcação</b> responsável por definir a estrutura de um documento</li>
+        <li>Conteúdo é anotado por meio de elementos suportados pela linguagem (tags)</li>
+        <li>Navegador recebe documento HTML repleto de tags, as interpreta e as exibe para o usuário</li>
+    </ul>
+</section>
+
+<section>
+    <h2>HTML</h2>
+<iframe height="300" style="width: 70%;" scrolling="no" title="hello-html"
+    src="https://codepen.io/jemaf/embed/xxabBjV?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy"
+    allowtransparency="true" allowfullscreen="true">
+    See the Pen <a href="https://codepen.io/jemaf/pen/xxabBjV">
+        hello-html</a> by João Eduardo Montandon (<a href="https://codepen.io/jemaf">@jemaf</a>)
+    on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+</section>
+
+<section>
+    <h2>Elementos</h2>
+    
+    <ul>
+        <li>São utilizados para descrever a estrutura da página</li>
+        <li>Cada elemento tem um propósito único e específico</li>
+        <li>São descritos por meio de <code>&lt;xml&gt;tags&lt;/xml&gt;</code></li>
+    </ul>
+</section>
+
+<section>
+    <!-- <h2>Elementos</h2> -->
+
+    <p style="font-size: 1.8em;">
+        <code data-noescape data-trim class="html">
+            <mark class="green">&lt;p&gt;</mark> <mark class="blue">Olá, HTML!</mark> <mark class="green">&lt;/p&gt;</mark>
+        </code>
+    </p>
+        
+        <!-- <ul>
+            <li><b>Tag de abertura</b> é representada pelo nome do elemento entre os símbolos &lt; e &gt;
+                (<code><mark class="green">&lt;p&gt;</mark></code>).</li>
+            <li><b>Tag de fechamento</b> é representada pelo nome do elemento entre &lt; e &gt;, porém precedido por barra
+                (<code><mark class="green">&lt;/p&gt;</mark></code>)</li>
+            <li><b>Conteúdo</b> representa o conteúdo do elemento a ser exibido, nesse caso
+                <code><mark class="blue">Olá, HTML!</mark></code></li>
+        </ul> -->
+</section>
+
+<section>
+    <h2>Atributos</h2>
+    <ul>
+        <li>Alguns elementos possuem informações extras que não podem ser exibidas na página</li>
+        <li>Essas informações podem ser definidas por meio dos atributos de um elemento</li>
+        <li>Um elemento pode ter vários atributos definidos</li>
+    </ul>
+</section>
+
+<section>
+    <p style="font-size: 1.4em;">
+        <code data-noescape data-trim class="html">
+            <mark class="green">&lt;a</mark> <mark>href="http://www.google.com.br"</mark>&gt;  <mark class="blue">Clique aqui</mark> <mark class="green">&lt;/a&gt;</mark>
+        </code>
+    </p>
+</section>
+
+<section>
+    <h2>Elementos Aninhados</h2>
+    <ul>
+        <li>Elementos podem (e devem!) ser declarados dentro de outros elementos</li>
+        <li>O aninhamento cria uma relação entre os elementos</li>
+        <li>Para isso, deve-se lembrar de fechar os elementos internos antes dos externos, sempre!</li>
+    </ul>
+</section>
+
+<section>
+    <p style="font-size: 1.7em;">
+        <code data-noescape data-trim class="html">
+            &lt;p&gt;HTML é &lt;b&gt;muito&lt;/b&gt; legal!&lt;/p&gt;
+        </code>
+    </p>
+</section>
+
+<section>
+    <h2>Elementos Vazios</h2>
+    <ul>
+        <li>Alguns elementos não precisam de conteúdo para serem renderizados</li>
+        <li>Seu "conteúdo" já é pré-definido ou carregado de fontes externas</li>
+        <li>Nesse caso, o elemento é fechado na sua abertura</li>
+    </ul>
+</section>
+
+<section>
+    <p>
+        <code data-noescape data-trim class="html">
+            <mark class="green">&lt;img</mark> <mark class="blue">src="images/coltec-ufmg.png"</mark> alt="Logo COLTEC" <mark class="green">/&gt</mark>
+        </code>
+    </p>
+</section>
+
+<section>
+    <h2>Estrutura Básica</h2>
+    <pre><code data-noescape data-trim class="html">
+        <mark>&lt;!DOCTYPE html&gt;</mark>
+        &lt;html&gt;
+
+            &lt;head&gt;
+                &lt;title&gt;Minha primeira página HTML&lt;/title&gt;
+            &lt;/head&gt;
+
+            &lt;body&gt;
+                &lt;!-- meu comentário --&gt;
+                &lt;p&gt; Essa é a minha primeira página web. &lt;/p&gt;
+            &lt;/body&gt;
+
+        &lt;/html&gt;
+    </code></pre>
+</section>
+
+<section>
+    <h2>Estrutura Básica</h2>
+    <dl>
+        <dd><code>&lt;!DOCTYPE&gt;</code> Versão do documento HTML</dd>
+        <dd><code>&lt;html&gt;</code> delimita a página HTML</dd>
+        <dd><code>&lt;head&gt;</code> Cabeçalho da página. Contém informações de configuração da página</dd>
+        <dd><code>&lt;body&gt;</code> Corpo da página. Contém toda informação que será exibida para o funcionário</dd>
+    </dl>
+</section>
+
+<section>
+    <h2>HTML - Exemplo</h2>
+    <iframe height="300" style="width: 70%;" scrolling="no" title="Untitled"
+        src="https://codepen.io/jemaf/embed/qBMEGLe?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy"
+        allowtransparency="true" allowfullscreen="true">
+        See the Pen <a href="https://codepen.io/jemaf/pen/qBMEGLe">
+            Untitled</a> by João Eduardo Montandon (<a href="https://codepen.io/jemaf">@jemaf</a>)
+        on <a href="https://codepen.io">CodePen</a>.
+    </iframe>
+</section>
